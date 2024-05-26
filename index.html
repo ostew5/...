@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link id="favicon" rel="icon" type="image/svg+xml" href="/assets/square.ico-V1LQVCyh.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volcaner</title>
+    <script type="module" crossorigin src="/assets/index-B5xntyBT.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DVJuwbc9.css">
+  </head>
+  <script>
+    function detectColorScheme() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function setFavicon() {
+      const colorScheme = detectColorScheme();
+      const favicon = document.getElementById('favicon');
+      
+      if (colorScheme === 'dark') {
+        favicon.href = './src/assets/square.ico.dark.svg';
+      } else {
+        favicon.href = './src/assets/square.ico.dark.svg';
+      }
+    }
+
+    setFavicon();
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setFavicon);
+  </script>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
